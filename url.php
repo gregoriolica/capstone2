@@ -1,21 +1,18 @@
-<?php
-//TEST URLS ONLYYYYY
+<?php 
+  $baseURL = 'http://localhost/JAM_LYINGIN/';
+  $patientDirectory = $baseURL . 'auth/action/patient/';
+  
+  $frontPageURL = $baseURL . 'front.php';
 
-// Auth routes (User/Patient))
-define('URL_SIGNUP',      '/JAM_Lyingin/auth/signup.php');
-define('URL_LOGIN',       '/JAM_Lyingin/auth/login.php');
-define('URL_LOGOUT',      '/JAM_Lyingin/logout.php');
-// Auth function routes
-define('URL_UPDATE_USER', '/JAM_Lyingin/auth/update_user.php');
-define('URL_UPDATE_PATIENT', '/JAM_Lyingin/auth/handle_update_patient.php');
+  $getPhysicalExamURL = $patientDirectory . 'patient_get_physical_exam_record.php';
+  $getMedicalHistoryURL = $patientDirectory . 'patient_get_medical_history.php';
+  $getObstetricalHistoryURL = $patientDirectory . 'patient_get_obstetrical_history.php';
+  $getVAWRiskAssessmentURL = $patientDirectory . 'patient_get_vaw_risk_assessment.php';
+  $getAppointmentRequestsURL = $patientDirectory . 'patient_get_appointment_requests.php';
+  $getVisitAnalyticsURL = $patientDirectory . 'patient_get_visit_analytics.php';
 
-// Auth routes (Medical Staff)
-define('URL_STAFF_LOGIN', '/JAM_Lyingin/auth/mslogin.php');
-define('URL_STAFF_SIGNUP',  '/JAM_Lyingin/msdash.php');
-define('URL_STAFF_DASH', '/JAM_Lyingin/dashboard.php');
-// Dashboard routes
-define('URL_DASH_PATIENT', '/JAM_Lyingin/pdash.php');
+  //Clerk URLs
+  $clerkDirectory = $baseURL . 'auth/action/clerk/';
+  $getClerkPatientRecordURL = $clerkDirectory . 'clerk_get_patient_record.php';
 
-// Home
-define('URL_HOME', '/JAM_Lyingin/front.php');
-define('URL_OTP_PAGE', '/JAM_Lyingin/auth/otp_page.php');
+?>
